@@ -8,44 +8,29 @@ h1{
     top: 20px;
 }
 
-form{
-    width: 60%;
-    position: absolute;
-    left: 20%;
-    top: 25%;
+form {
+    width: 40%;
+    margin: 0 auto;
     text-align: center;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-input{
-    display:block;
-    width: 40%;
+select, input{
+    width: 40%; /* Set width to 40% for both select and input */
     padding: 12px 20px;
     margin: 10px 0;
     box-sizing: border-box;
     height: 40px;
     border-radius: 5px;
+}
+
+input{
     position: relative;
-    left: 30%;
-    top: 50px;
+    left: 20%;
 }
 
-select{
-    display: block;
-    position: absolute;
-    left: 30%;
-    width: 40%;
-    height: 40px;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px 0px;
-    font-size: 16px;
-}
-
-input:focus{
-    background-color: #D2E0FB;
-    border: 3px solid #555;
-}
 
 #submit{
     width: 150px;
@@ -79,6 +64,7 @@ input:focus{
 background-color: orange;
 }
 
+
 @media (max-width:600px){
     h1{
         font-size: 30px;
@@ -103,3 +89,4 @@ background-color: orange;
         width: 100px;
     }
 }
+

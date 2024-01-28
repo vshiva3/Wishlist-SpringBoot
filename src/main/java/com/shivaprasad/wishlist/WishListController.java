@@ -4,10 +4,16 @@ import java.util.ArrayList;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import jakarta.validation.Valid;
+
+
 
 @Controller
 public class WishListController {
@@ -21,14 +27,16 @@ public class WishListController {
 
     @GetMapping("/form")
     public String getForm(Model model,@RequestParam(required = false) String id){
-        model.addAttribute("categories", Constants.CATEGORIES);
         int index = isTheItemAvailable(id);
         model.addAttribute("wishlist", index!=Constants.NOT_FOUND ? list.get(index) : new WishList());
         return "form";
     }
 
     @PostMapping("/handleList")
-    public String receiveData(WishList wishlist, RedirectAttributes redirectAttributes){
+    public String receiveData(@Valid @ModelAttribute("wishlist") WishList wishlist, BindingResult result, RedirectAttributes redirectAttributes){
+        if(result.hasErrors()){
+            return "form";
+        }
         int index = isTheItemAvailable(wishlist.getId());
         String status = Constants.FAIL;
         if(index == Constants.NOT_FOUND){

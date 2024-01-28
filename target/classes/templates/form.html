@@ -1,42 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Montserrat&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" th:href="@{/style.css}">
-    <link rel="stylesheet" th:href="@{/form-style.css}">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" th:href="@{/style.css}" />
+    <link rel="stylesheet" th:href="@{/form-style.css}" />
     <title>Add items to your list</title>
-</head>
-<body>
+  </head>
+  <body>
     <nav class="navbar">
-        <a th:href="@{/}">Home</a>
-        <a th:href="@{/form}" class="active">Add Items</a>
-        <a th:href="@{/viewdata}">View Items</a>
+      <a th:href="@{/}">Home</a>
+      <a th:href="@{/form}" class="active">Add Items</a>
+      <a th:href="@{/viewdata}">View Items</a>
     </nav>
     <h1>Item Details</h1>
-    
+
     <form method="post" th:action="@{/handleList}" th:object="${wishlist}">
-        <select th:field="*{category}">
-            <option value="">Choose Categoty</option>
-            <option th:each="Category: ${categories}" th:text="${Category}" th:value="${Category}"></option>
-        </select>
-        <input type="text" placeholder="Item Name" th:field="*{name}">
-        <input type="text" placeholder="Cost" th:field="*{cost}">
-        <input type="date" placeholder="Expected date of buying" th:field="*{date}">
-        <input type="hidden" th:field="*{id}">
-        <input id="submit" type="submit">
+      <select th:field="*{category}">
+        <option value="">Choose Categoty</option>
+        <option value="Groceries">Groceries</option>
+        <option value="Electronics">Electronics</option>
+        <option value="Fashion">Fashion</option>
+        <option value="Medicines">Medicines</option>
+      </select>
+
+      <div class="inputss">
+        <input type="text" placeholder="Item Name" th:field="*{name}" />
+        <p th:errors="*{name}"></p>
+        <input type="text" placeholder="Cost" th:field="*{cost}" />
+        <p th:errors="*{cost}" style="color: red"></p>
+        <input
+          type="date"
+          placeholder="Expected date of buying"
+          th:field="*{date}"
+        />
+        <input type="hidden" th:field="*{id}" />
+        <input id="submit" type="submit" />
+      </div>
     </form>
     <div class="alert success" th:if="${status == 'Success'}">
-        <strong>Item added to wishlist successfully</strong>
+      <strong>Item added to wishlist successfully</strong>
     </div>
     <div class="alert update" th:if="${status == 'Update'}">
-        <strong>Item updated successfully</strong>
+      <strong>Item updated successfully</strong>
     </div>
     <div class="alert" th:if="${status == 'Fail'}">
-        <strong>Item failes to add/update</strong>
+      <strong>Item failes to add/update</strong>
     </div>
-</body>
+  </body>
 </html>

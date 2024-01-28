@@ -5,9 +5,13 @@ import java.util.UUID;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+import jakarta.validation.constraints.NotBlank;
+
 public class WishList {
     private String category;
+    @NotBlank(message = "Must not be blank")
     private String name;
+    @NotBlank(message = "Enter amount")
     private String cost;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date date;

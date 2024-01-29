@@ -8,6 +8,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import jakarta.validation.constraints.NotBlank;
 
 public class WishList {
+    @Category(message = "Must be from list")
     private String category;
     @NotBlank(message = "Must not be blank")
     private String name;

@@ -29,7 +29,7 @@
         <option value="Fashion">Fashion</option>
         <option value="Medicines">Medicines</option>
       </select>
-
+      <p th:errors="*{category}"></p>
       <div class="inputss">
         <input type="text" placeholder="Item Name" th:field="*{name}" />
         <p th:errors="*{name}"></p>

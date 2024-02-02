@@ -1,4 +1,4 @@
-package com.shivaprasad.wishlist;
+package com.shivaprasad.wishlist.customconstraints;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

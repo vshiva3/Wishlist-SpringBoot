@@ -1,4 +1,4 @@
-package com.shivaprasad.wishlist;
+package com.shivaprasad.wishlist.customconstraints;
 
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;

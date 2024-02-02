@@ -1,9 +1,11 @@
-package com.shivaprasad.wishlist;
+package com.shivaprasad.wishlist.pojo;
 
 import java.util.Date;
 import java.util.UUID;
 
 import org.springframework.format.annotation.DateTimeFormat;
+
+import com.shivaprasad.wishlist.customconstraints.Category;
 
 import jakarta.validation.constraints.NotBlank;
 

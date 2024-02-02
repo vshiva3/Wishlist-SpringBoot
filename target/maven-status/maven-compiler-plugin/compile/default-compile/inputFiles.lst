@@ -1,6 +1,8 @@
-C:\Users\vshiv\OneDrive\Desktop\Wishlist-SpringBoot\src\main\java\com\shivaprasad\wishlist\Category.java
-C:\Users\vshiv\OneDrive\Desktop\Wishlist-SpringBoot\src\main\java\com\shivaprasad\wishlist\WishList.java
-C:\Users\vshiv\OneDrive\Desktop\Wishlist-SpringBoot\src\main\java\com\shivaprasad\wishlist\WishListController.java
-C:\Users\vshiv\OneDrive\Desktop\Wishlist-SpringBoot\src\main\java\com\shivaprasad\wishlist\CategoryValidator.java
+C:\Users\vshiv\OneDrive\Desktop\Wishlist-SpringBoot\src\main\java\com\shivaprasad\wishlist\controller\WishListController.java
+C:\Users\vshiv\OneDrive\Desktop\Wishlist-SpringBoot\src\main\java\com\shivaprasad\wishlist\pojo\WishList.java
+C:\Users\vshiv\OneDrive\Desktop\Wishlist-SpringBoot\src\main\java\com\shivaprasad\wishlist\service\WishlistService.java
 C:\Users\vshiv\OneDrive\Desktop\Wishlist-SpringBoot\src\main\java\com\shivaprasad\wishlist\Constants.java
+C:\Users\vshiv\OneDrive\Desktop\Wishlist-SpringBoot\src\main\java\com\shivaprasad\wishlist\repository\WishlistRepository.java
+C:\Users\vshiv\OneDrive\Desktop\Wishlist-SpringBoot\src\main\java\com\shivaprasad\wishlist\customconstraints\CategoryValidator.java
+C:\Users\vshiv\OneDrive\Desktop\Wishlist-SpringBoot\src\main\java\com\shivaprasad\wishlist\customconstraints\Category.java
 C:\Users\vshiv\OneDrive\Desktop\Wishlist-SpringBoot\src\main\java\com\shivaprasad\wishlist\WishlistApplication.java

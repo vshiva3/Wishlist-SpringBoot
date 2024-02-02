@@ -50,4 +50,4 @@ jobs:
           app-name: 'Wishlist-First'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_90D100C73CE643D3816D379E840C06BD }}
-          package: '*.war'
+          package: '*.jar'

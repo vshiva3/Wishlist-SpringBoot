@@ -72,7 +72,7 @@ jobs:
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
-        uses: azure/webapps-deploy@v2
+        uses: azure/webapps-deploy@Azure-for-Students
         with:
           app-name: ${{ env.Wishlist-SpringBoot }}
           publish-profile: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_KIND_ISLAND_0EBB31E10 }}

@@ -66,10 +66,3 @@
 	</build>
 
 </project>
-1s
-Run actions/download-artifact@v3
-  with:
-    name: java-app
-  
-Starting download for java-app
-Error: Unable to find any artifacts for the associated workflow

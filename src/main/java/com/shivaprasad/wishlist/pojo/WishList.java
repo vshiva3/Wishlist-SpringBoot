@@ -25,6 +25,14 @@ public class WishList {
         this.id = UUID.randomUUID().toString();
     }
 
+    public WishList(String category, String name, String cost, Date date){
+        this.id = UUID.randomUUID().toString();
+        this.category = category;
+        this.name = name;
+        this.cost = cost;
+        this.date = date;
+    }
+
     public String getCategory() {
         return this.category;
     }
